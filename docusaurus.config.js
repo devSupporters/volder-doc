@@ -6,9 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "VOLDER",
-  tagline:
-    " volder is powerful Object schema validation lets you describe your data using a simple and readable schema and transform a value to match the requirements ",
+  title: "volder",
+  tagline: "schema builder and data validation and parsing",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "warn",
@@ -16,7 +15,6 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "github/alguerocode",
   projectName: "volder",
-
   presets: [
     [
       "classic",
@@ -41,16 +39,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        logo: {
-          alt: "Volder Logo",
-          src: "img/volder-logo.png",
-        },
+        title:"VOLDER",
         items: [
           {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Tutorial",
+            label: "API",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
