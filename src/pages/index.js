@@ -10,7 +10,7 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title" style={{ fontFamily: "gaoelregular" }}>
+        <h1 className="hero__title" style={{ fontFamily: "gaoelregular", fontStyle: "normal" }}>
           {siteConfig.title}
         </h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>

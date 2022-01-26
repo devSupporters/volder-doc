@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Volder",
+  title: "VOLDER",
   tagline:
     " volder is powerful Object schema validation lets you describe your data using a simple and readable schema and transform a value to match the requirements ",
   url: "https://your-docusaurus-test-site.com",
