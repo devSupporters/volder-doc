@@ -16,6 +16,11 @@
   }
 }
 
+@media screen and (min-width: 600px) {
+  .heroImg {
+    width: 300px;
+  }
+}
 .buttons {
   display: flex;
   align-items: center;
