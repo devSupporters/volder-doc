@@ -42,9 +42,9 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "get-started",
             position: "left",
-            label: "API",
+            label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
@@ -62,7 +62,11 @@ const config = {
             items: [
               {
                 label: "API",
-                to: "/docs/intro",
+                to: "/docs/get-started",
+              },
+              {
+                label: "Blog",
+                to: "/blog",
               },
             ],
           },
@@ -86,10 +90,6 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
               {
                 label: "dev.to",
                 to: "https://dev.to/alguercode",
