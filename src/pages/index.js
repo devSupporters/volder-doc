@@ -71,11 +71,12 @@ function HomepageHeader() {
         }
 
         .hero__subtitle {
-          color: black;
+          color: #333333;
         }
 
         .hero {
-          background: white;
+          background-color: #a4b0fb;
+          background-image: linear-gradient(45deg, #a4b0fb 0%, #f1f4ff 100%);
         }
 
         html[data-theme="dark"] .hero {

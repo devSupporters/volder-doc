@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
   organizationName: "github/alguerocode",
   projectName: "volder",
   presets: [
@@ -34,12 +34,11 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title:"VOLDER",
+        title: "VOLDER",
         items: [
           {
             type: "doc",
@@ -62,7 +61,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "API",
                 to: "/docs/intro",
               },
             ],
@@ -71,16 +70,16 @@ const config = {
             title: "Community",
             items: [
               {
+                label: "Portfolio",
+                href: "https://alguero.vercel.app/",
+              },
+              {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                href: "https://stackoverflow.com/users/15742951/alguerocode",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "GitHub",
+                href: "https://github.com/alguerocode",
               },
             ],
           },
@@ -92,8 +91,13 @@ const config = {
                 to: "/blog",
               },
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "dev.to",
+                to: "https://dev.to/alguercode",
+              },
+
+              {
+                label: "instagram",
+                href: "https://www.instagram.com/alhashmis246/",
               },
             ],
           },
