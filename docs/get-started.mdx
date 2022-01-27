@@ -1,0 +1,77 @@
+---
+sidebar_position: 1
+---
+
+# Getting Started
+
+**volder** is powerful Object schema validation, it lets you describe your data using a simple and readable schema and transform a value to match the requirements, it has custom error messages, custom types and nested schemas.
+
+---
+
+- **[📦 Volder GitHub Repository](https://github.com/devSupporters/volder)**
+- **[👨‍💻 Try in codebox]('after')**
+- **[🗃️ API](/api)**
+- **[🗂️ Examples](/examples)**
+- **[📝 Contributing to Volder](/docs/contributing)**
+
+## Advantages
+
+This list show you the volder **advantages** compared with other validation libraries:
+
+- ✅ **Unrequired** to install other dependency to run volder package.
+- ✅ volder use Maps to validate data, that will improve **performance** and decrease the time.
+- ✅ support **Object Schema** to describe your data.
+
+## installation
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="npm" label="NPM">
+
+```bash
+npm install --save volder
+```
+
+</TabItem>
+<TabItem value="yarn" label="Yarn">
+
+```bash
+yarn add volder
+```
+
+</TabItem>
+</Tabs>
+
+## Example
+
+let's took one example using volder for user validation
+
+```js
+import { Volder, Email } from "volder";
+
+// initialize using Volder constructor
+const userSchema = new Volder({
+  username: {
+    type: String, // specify the type
+    maxLength: 10, // use maxLength config to strict at most 10 characters
+    minLength: [4, "username should be at least 4 characters"], // use Custom Error Message feature
+  },
+  email: {
+    type: [Email, "is not valid email"], // use Email type, Volder support other type that javascript has
+  },
+});
+
+const data = {
+  user: "max123",
+  email: "test@gmail.teest",
+  password: "newPassword123",
+};
+
+const { valid, errors, value } = userSchema.validate(data);
+
+// valid = true
+// errors = {} empty object otherwise it return errors and valid equal false
+// value = same as data value but if you add transfomation it will be cloned and the value change without attach the origin value
+```
