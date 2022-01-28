@@ -6,20 +6,20 @@ sidebar_position: 0
 
 #### Schema Validation Functions
 
-- [**Schema.validate( input: Object) : Object**](#validate)
-- [**Schema.valid( input: Object) : Boolean**](#valid)
+- [**Schema.validate( input: Object) : Object**](#schemavalidateinput-object--object)
+- [**Schema.valid( input: Object) : Boolean**](#schemavalid-input-object--boolean)
 
 #### General Configs
 
-- [**type: js_type | Function(input) : Boolean**](#type)
-- [**required: Boolean**](#required)
-- [**pattern: Function(input) : Boolean**](#pattern)
-- [**transform: Function(input) : undefined**](#transform)
+- [**type: js_type | Function(input) : Boolean**](#type-js_type--functioninput--boolean)
+- [**required: Boolean**](#required-boolean)
+- [**pattern: Function(input) : Boolean**](#pattern-functioninput--boolean)
+- [**transform: Function(input) : undefined**](#transform-functioninput--undefined)
 
 #### Other Options
 
-- [**Custom Error Message**](#Custom_Error)
-- [**Custom type**](#Custom_type)
+- [**Custom Error Message**](#custom-error-message)
+- [**Custom type**](#custom-type)
 
 ---
 
@@ -55,7 +55,7 @@ nameSchema.valid({ name: 23 }); // return false
 `type` config must be included, or will throw an Error.
 :::
 
-you can add `Custom` type, [**see how custom type work.**](/custom-type)
+you can add `Custom` type, [**see how custom type work.**](#custom-type)
 
 ```js
 const numberSetType = new Volder({ age: { type: Number } });
@@ -83,7 +83,7 @@ const { valid, errors, value } = nameSchema.validate({ }).
 pattern accept `Function` and the `arg1` is input with specific value you set in schema and return Boolean type `true` or `false`.
 
 :::info
-we will use `singleVolder` function. [**see more about singleVolder.**](#single-volder)
+we will use `singleVolder` function. [**see more about singleVolder.**](./single-volder)
 :::
 
 ```js
@@ -181,5 +181,5 @@ import { singleVolder, Email } from 'volder';
 const isEmail = singleVolder({ type: Email });
 isEmail.valid('test@gmail.test') // -> true
 ```
-[**see more in other types page.**](/other-types)
+[**see more in other types page.**](./volder-types)
 :::
