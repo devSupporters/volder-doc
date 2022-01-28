@@ -10,6 +10,8 @@ sidebar_position: 3
 - [**sensible: Boolean**](#)
 - [**switch: Boolean**](#)
 
+---
+
 ### `state: Boolean`
 Requires the input to be in strict state: (true | false). **state accept custom error message**
 
