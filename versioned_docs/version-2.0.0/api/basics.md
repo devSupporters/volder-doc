@@ -89,7 +89,7 @@ You can use volder supported types in pattern config if type = `String`
 import { Volder, Email } from 'volder';
 const user = new Volder({ email: { type: String, pattern: Email } })
 :::
-:::info
+:::tip
 we will use `singleVolder` function. [**see more about singleVolder.**](./single-volder)
 :::
 
@@ -121,7 +121,7 @@ const { valid, errors, value } = name.validate("max");
 `Custom Error Message` is important feature you must use it. custom error change using default error message to use your custom error message.
 
 To add a custom error message `{ configName: [value, error message]}`
-:::info
+:::tip
 Value must be in index 0 of array and error message must be in index 1 of array.
 :::
 see the exampe to know how it works.

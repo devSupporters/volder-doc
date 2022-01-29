@@ -38,7 +38,7 @@ vlaidEmail.valid("test@test.com"); // -> true
 vlaidEmail.valid("test@gmailcom"); // -> false
 ```
 
-### `IPAddress(input :String): Boolean`
+### `IPAddress(input :String, version): Boolean`
 
 Requires the string value to be a valid ip address. **(version 4 or 6).**
 
@@ -48,7 +48,14 @@ validIPAddress.valid("2001:db8:0000:1:1:1:1:1"); // -> true
 validIPAddress.valid("0200.200.200.200"); // -> false
 ```
 
-### `UUID(input: String): Boolean`
+adding version to the IPAddress type:
+```js
+const validIPAddress = singleVolder({
+  type: (input) => IPAddress(input, /* 6 or 4 */)
+});
+```
+
+### `UUID(input: String, version): Boolean`
 
 Requires the string value to be a valid UUID. **(version 1, 2, 3, 4 or 5).**
 
@@ -58,6 +65,12 @@ validUUID.valid("A987FBC9-4BED-3078-CF07-9141BA07C9F3"); // -> true
 validUUID.valid("A987FBC9-4BED-3078-CF07-9141BA07C9F3xxx"); // -> false
 ```
 
+adding version to the UUID type:
+```js
+const validUUID = singleVolder({
+  type: (input) => UUID(input, /* 1, 2, 3, 4 or 5*/)
+});
+```
 ### `CreditCard(input: String): Boolean`
 
 Requires the number to be a credit card number.
