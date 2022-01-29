@@ -17,7 +17,9 @@ sidebar_position: 8
 ## Usage
 
 **volder types take string as input and validate it and then return Boolean (true or false), all volder types accept custom error message.**
-
+:::info
+`RFC 2822` standard email validation
+:::
 ```js
 import { Volder, Email, IPAddress } from "volder";
 
