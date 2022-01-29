@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "volder",
   tagline: "schema builder and data validation and parsing",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://volder.vercel.app",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
