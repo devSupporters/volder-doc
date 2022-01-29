@@ -40,7 +40,7 @@ vlaidEmail.valid("test@gmailcom"); // -> false
 
 ### `IPAddress(input :String): Boolean`
 
-Requires the string value to be a valid ip address.
+Requires the string value to be a valid ip address. **(version 4 or 6).**
 
 ```js
 const validIPAddress = singleVolder({ type: IPAddress });
