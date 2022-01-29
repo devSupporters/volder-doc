@@ -7,8 +7,8 @@ sidebar_position: 8
 **volder support other types to improve the validation process specifically on strings.**
 
 - [**Email(input: String): Boolean**](#emailinput-string-boolean)
-- [**IPAddress(input :String): Boolean**](#ipaddressinput-string-boolean)
-- [**UUID(input: String): Boolean**](#uuidinput-string-boolean)
+- [**IPAddress(input :String, version): Boolean**](#ipaddressinput-string-version-boolean)
+- [**UUID(input: String, version): Boolean**](#uuidinput-string-version-boolean)
 - [**CreditCard(input: String): Boolean**](#creditcardinput-string-boolean)
 - [**URL(input: String): Boolean**](#urlinput-string-boolean)
 
