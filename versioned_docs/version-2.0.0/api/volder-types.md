@@ -31,9 +31,6 @@ const user = new Volder({
 ### `Email(input: String): Boolean`
 
 Requires the string value to be a valid email address.
-:::info
-Notice: the Email function validate emails matches `Gmail style`.
-:::
 
 ```js
 const vlaidEmail = singleVolder({ type: Email });
