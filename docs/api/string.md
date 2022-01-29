@@ -10,6 +10,8 @@ sidebar_position: 1
 - [**required: Boolean**](#required-boolean) described in basics APIs page
 - [**pattern: Function(input) : Boolean**](./basics#pattern-functioninput--boolean) described in basics APIs page
 - [**transform: Function(input) : undefined**](./basics#transform-functioninput--undefined) described in basics APIs page
+- [**maxLength: Number**](#maxlength-number)
+- [**minLength: Number**](#minlength-number)
 - [**matches: Regex**](#matches-regex)
 - [**alphanumeric: Boolean**](#alphanumeric-boolean)
 - [**uppercase: Boolean**](#uppercase-boolean)
@@ -18,6 +20,24 @@ sidebar_position: 1
 - [**trim: Boolean**](#trim-boolean)
 
 ---
+
+### `maxLength: Number`
+
+Specifies the maximum number of string length. **maxLength accept custom error message**.
+
+```js
+const username = singleVolder({ type: String, maxLength: 5 });
+username.valid("hello"); // -> true
+```
+
+### `minLength: Number`
+
+Specifies the minimum number of string length. **minLength accept custom error message**.
+
+```js
+const username = singleVolder({ type: String, minLength: 4 });
+username.valid("max"); // -> false
+```
 
 ### `required: Boolean`
 
@@ -53,6 +73,7 @@ username.valid("welcome.1234"); // -> false
 ```
 
 ### `uppercase: Boolean`
+
 `uppercase` accpet string that not have small letters.
 **uppercase accpet custom error message**
 
@@ -60,7 +81,9 @@ username.valid("welcome.1234"); // -> false
 const username = singleVolder({ type: String, uppercase: true });
 username.valid("WELCOME.1234"); // -> true
 ```
+
 ### `lowercase: Boolean`
+
 `lowercase` accpet string that not have big letters.**lowercase accpet custom error message**
 
 ```js
@@ -71,15 +94,20 @@ username.valid("welcome.1234"); // -> true
 :::caution
 if you set `lowercase` and `uppercase` to true at the same time, it will throw an Error
 :::
+
 ### `whitespace: Boolean`
+
 if `whitespace` set to `false`,it accpet string that not have whitespace.**whitespace accpet custom error message**
+
 ```js
 const username = singleVolder({ type: String, whitespace: false });
 username.valid("welcome.1234 "); // -> false
 ```
 
 ### `trim: Boolean`
+
 `trim` = true, it will trim the Entered string.
+
 ```js
 const username = singleVolder({ type: String, trim: true });
 const { value } = username.validate("  welcome.1234 ");

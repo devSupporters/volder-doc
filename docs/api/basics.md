@@ -20,6 +20,7 @@ sidebar_position: 0
 
 - [**Custom Error Message**](#custom-error-message)
 - [**Custom type**](#custom-type)
+- [**Nested Schemas**](#nested-schemas)
 
 ---
 
@@ -81,7 +82,13 @@ const { valid, errors, value } = nameSchema.validate({ }).
 ### `pattern: Function(input) : Boolean`
 
 pattern accept `Function` and the `arg1` is input with specific value you set in schema and return Boolean type `true` or `false`.
+:::info
+you can use volder supported types in pattern config if type = `String`
 
+````js
+import { Volder, Email } from 'volder';
+const user = new Volder({ email: { type: String, pattern: Email } })
+:::
 :::info
 we will use `singleVolder` function. [**see more about singleVolder.**](./single-volder)
 :::
@@ -94,7 +101,7 @@ const peoples = singleVolder({
     });
 
 peoples.valid(['messy', 'ronaldo', 'david']); // ->  false
-```
+````
 
 ### `transform: Function(input) : undefined`
 
@@ -154,32 +161,62 @@ const { valid, errors, value } = customPerson.validate({ name: 'me', age: false 
    value = {}
 */
 ```
+
 ### Custom Type
+
 Custom type is other approach to specify the type you like.
 
 Custom type is a `Function`, `arg1` is an input and function return `Boolean (true or false)`.
+
 - `true` => the type is correct.
 - `false` => the type is uncorrect and will add error message to the error object.
 
 ```js
+const CustomType = singleVolder({
+  type: (input) => {
+    return typeof input === "string" && input.includes("_");
+  },
+});
 
-const CustomType = singleVolder({ 
-    type: (input) => {
-        return typeof input === 'string' && input.includes('_');
-    }
-})
-
-CustomType.valid('max_min') // -> true
+CustomType.valid("max_min"); // -> true
 ```
 
 :::info
 you can use other types that volder support in `type` config as a `Function`.
 
 ```js
-import { singleVolder, Email } from 'volder';
+import { singleVolder, Email } from "volder";
 
 const isEmail = singleVolder({ type: Email });
-isEmail.valid('test@gmail.test') // -> true
+isEmail.valid("test@gmail.test"); // -> true
 ```
+
 [**see more in other types page.**](./volder-types)
 :::
+
+### Nested Schemas
+
+You Can Define Nested volder schemas by:
+
+```js
+import { Volder } from "volder";
+
+const personSchema = new Volder({ name: String, age: Number });
+
+const user = new Volder({
+  email: { type: String, trim: true },
+  person: personSchema,
+});
+
+const { valid, errors, value } = user.validate({
+  person: { name: "lion", age: 23 },
+  email: "test@test.com   ",
+});
+/* valid = true
+   errors = {}
+   value = {
+     person: { name: "lion", age: 23 },
+     email: "test@test.com",
+    }
+*/
+```
