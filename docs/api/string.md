@@ -53,7 +53,7 @@ person.valid({ name: "" }); // -> true
 
 ### `matches: Regex`
 
-set regex to validate the input string. it accept `regular regex` and `string reguex`
+Set `Regex` to validate the input string. it accept `regular regex` and `string reguex`
 **matches accpet custom error message**
 
 ```js
@@ -92,12 +92,12 @@ username.valid("welcome.1234"); // -> true
 ```
 
 :::caution
-if you set `lowercase` and `uppercase` to true at the same time, it will throw an Error
+If you set `lowercase` and `uppercase` to true at the same time, it will throw an Error
 :::
 
 ### `whitespace: Boolean`
 
-if `whitespace` set to `false`,it accpet string that not have whitespace.**whitespace accpet custom error message**
+If `whitespace` set to `false`,it accpet string that not have whitespace.**whitespace accpet custom error message**
 
 ```js
 const username = singleVolder({ type: String, whitespace: false });

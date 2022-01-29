@@ -56,7 +56,7 @@ nameSchema.valid({ name: 23 }); // return false
 `type` config must be included, or will throw an Error.
 :::
 
-you can add `Custom` type, [**see how custom type work.**](#custom-type)
+You can add `Custom` type, [**see how custom type work.**](#custom-type)
 
 ```js
 const numberSetType = new Volder({ age: { type: Number } });
@@ -81,9 +81,9 @@ const { valid, errors, value } = nameSchema.validate({ }).
 
 ### `pattern: Function(input) : Boolean`
 
-pattern accept `Function` and the `arg1` is input with specific value you set in schema and return Boolean type `true` or `false`.
+Pattern accept `Function` and the `arg1` is input with specific value you set in schema and return Boolean type `true` or `false`.
 :::info
-you can use volder supported types in pattern config if type = `String`
+You can use volder supported types in pattern config if type = `String`
 
 ````js
 import { Volder, Email } from 'volder';
@@ -120,9 +120,9 @@ const { valid, errors, value } = name.validate("max");
 
 `Custom Error Message` is important feature you must use it. custom error change using default error message to use your custom error message.
 
-to add a custom error message `{ configName: [value, error message]}`
+To add a custom error message `{ configName: [value, error message]}`
 :::info
-value must be in index 0 of array and error message must be in index 1 of array.
+Value must be in index 0 of array and error message must be in index 1 of array.
 :::
 see the exampe to know how it works.
 
@@ -182,7 +182,7 @@ CustomType.valid("max_min"); // -> true
 ```
 
 :::info
-you can use other types that volder support in `type` config as a `Function`.
+You can use other types that volder support in `type` config as a `Function`.
 
 ```js
 import { singleVolder, Email } from "volder";

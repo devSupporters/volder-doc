@@ -6,16 +6,16 @@ sidebar_position: 2
 
 #### Number type configs
 - { **type: Number** }
-- [**required: Boolean**](#required-boolean) described in basics APIs page
+- [**required: Boolean**](./basics#required-boolean) described in basics APIs page
 - [**pattern: Function(input) : Boolean**](./basics#pattern-functioninput--boolean) described in basics APIs page
 - [**transform: Function(input) : undefined**](./basics#transform-functioninput--undefined) described in basics APIs page
-- [**max: Number**](#)
-- [**min: Number**](#)
-- [**integer: Boolean**](#)
-- [**float: Boolean**](#)
-- [**sing: 'positive'|  'negative'**](#)
-- [**round: Boolean**](#)
-- [**fixed: Number**](#)
+- [**max: Number**](#max-number)
+- [**min: Number**](#min-number)
+- [**integer: Boolean**](#integer-boolean)
+- [**float: Boolean**](#float-boolean)
+- [**sing: 'positive'|  'negative'**](#sing-positive--negative)
+- [**round: Boolean**](#round-boolean)
+- [**fixed: Number**](#fixed-number)
 
 ---
 
@@ -50,14 +50,14 @@ const number = singleVolder({ type: Number, sign: 'positive' });
 number.valid(-23); // -> false
 ```
 ### `round: Boolean`
-round the number to the nearest integer.
+Round the number to the nearest integer.
 ```js
 const number = singleVolder({ type: Number, round: true });
 const { value } = number.validate(2.6);
 // value = 3;
 ```
 ### `fixed: Number`
-transform the number to be in specific fixed. 
+Transform the number to be fixed decimal number. 
 ```js
 const number = singleVolder({ type: Number, fixed: 2 });
 const { value } = number.validate(1.2423523); 
