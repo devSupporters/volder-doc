@@ -89,7 +89,7 @@ If you are a beginner and don't know how to make a pull request, check out this 
   - :green_heart: `:CI improvment:` when fixing or improve the CI build
   - :white_check_mark: `:test:` when adding tests
   - :lock: `:lock:` when dealing with security
-
+  
 ### Documentation Styleguide
 
 Use [Markdown](https://guides.github.com/features/mastering-markdown/) to write documentation.
