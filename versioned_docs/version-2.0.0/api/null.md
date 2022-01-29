@@ -27,11 +27,11 @@ const null = singleVolder({
 const { valid, errors, value } = null.validate('name');
 /* valid = false
    errors = "strings and numbers not allowed"
-   value = null
+   value = 'name'
 */
 const { valid, errors, value } = null.validate(123);
 /* valid = false
    errors = "strings and numbers not allowed"
-   value = null
+   value = 123
 */
 ```
