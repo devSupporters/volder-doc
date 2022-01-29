@@ -50,7 +50,7 @@ validIPAddress.valid("0200.200.200.200"); // -> false
 
 ### `UUID(input: String): Boolean`
 
-Requires the string value to be a valid UUID.
+Requires the string value to be a valid UUID. **(version 1, 2, 3, 4 or 5).**
 
 ```js
 const validUUID = singleVolder({ type: UUID });
