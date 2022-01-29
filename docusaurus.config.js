@@ -15,6 +15,7 @@ const config = {
   favicon: "img/favicon.png",
   organizationName: "github/alguerocode",
   projectName: "volder",
+  trailingSlash: false,
   presets: [
     [
       "classic",
