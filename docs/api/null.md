@@ -6,7 +6,7 @@ sidebar_position: 7
 
 #### null type configs
 
-- { **type: null**}
+- {  **type:  null** }
 - [**avoid: [...items]**](#avoid-items)
 
 :::info

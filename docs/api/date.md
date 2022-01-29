@@ -10,8 +10,8 @@ sidebar_position: 6
 - [**required: date**](./basics#required-date) described in basics APIs page
 - [**pattern: Function(input) : date**](./basics#pattern-functioninput--date) described in basics APIs page
 - [**transform: Function(input) : undefined**](./basics#transform-functioninput--undefined) described in basics APIs page
-- [**after: String**](#) 
-- [**before: String**](#)
+- [**after: String**](#after-string) 
+- [**before: String**](#before-string)
 
 ---
 
