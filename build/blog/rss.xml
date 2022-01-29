@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>volder Blog</title>
+        <link>https://your-docusaurus-test-site.com/blog</link>
+        <description>volder Blog</description>
+        <lastBuildDate>Wed, 26 Jan 2022 05:40:45 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[publish volder npm package]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/validation</link>
+            <guid>validation</guid>
+            <pubDate>Wed, 26 Jan 2022 05:40:45 GMT</pubDate>
+            <description><![CDATA[what is volder]]></description>
+            <content:encoded><![CDATA[<h4>what is volder</h4><p><strong>volder</strong> is powerful Object schema validation, it lets you describe your data using a simple and readable schema and transform a value to match the requirements, it has custom error messages, custom types and nested schemas.</p><p><img src="https://user-images.githubusercontent.com/75932477/150915662-e15f2856-7aab-4934-a90b-094cb4181824.png" alt="volder logo"/></p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

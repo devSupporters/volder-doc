@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvolder_doc=self.webpackChunkvolder_doc||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"publish volder npm package","permalink":"/blog/validation"}]}')}}]);

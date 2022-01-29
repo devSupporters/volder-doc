@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-docusaurus-test-site.com/blog</id>
+    <title>volder Blog</title>
+    <updated>2022-01-26T05:40:45.660Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
+    <subtitle>volder Blog</subtitle>
+    <icon>https://your-docusaurus-test-site.com/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[publish volder npm package]]></title>
+        <id>validation</id>
+        <link href="https://your-docusaurus-test-site.com/blog/validation"/>
+        <updated>2022-01-26T05:40:45.660Z</updated>
+        <summary type="html"><![CDATA[what is volder]]></summary>
+        <content type="html"><![CDATA[<h4>what is volder</h4><p><strong>volder</strong> is powerful Object schema validation, it lets you describe your data using a simple and readable schema and transform a value to match the requirements, it has custom error messages, custom types and nested schemas.</p><p><img src="https://user-images.githubusercontent.com/75932477/150915662-e15f2856-7aab-4934-a90b-094cb4181824.png" alt="volder logo"/></p>]]></content>
+        <author>
+            <name>salah alhashmi</name>
+            <uri>https://github.com/alguerocode</uri>
+        </author>
+    </entry>
+</feed>
