@@ -38,6 +38,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: "27MGXFKBZP",
+        apiKey: "69dfce7d3b18954b83faa0f3c71fdb72",
+        indexName: "devSupporters",
+        contextualSearch: true,
+      },
       navbar: {
         title: "VOLDER",
         items: [
