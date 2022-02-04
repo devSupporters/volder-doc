@@ -16,15 +16,17 @@ sidebar_position: 8
 
 ## Usage
 
-**volder types take string as input and validate it and then return Boolean (true or false), all volder types accept custom error message.**
+**volder types take a string as input in first argument and then return Boolean (true if input is valid and false if input is invalid) , all volder types accept custom error message.**
 
 ```js
 import { Volder, Email, IPAddress } from "volder";
 
+const isVlidEmail = Email('test@test.com') // use it as function for single value;
+
 const user = new Volder({
   username: { type: String, alphanumeric: true },
-  email: { type: String, pattern: Email }, // you can pass Email function in pattern.
-  ip_address: { type: IPAddress, trim: true }, // you can pass as a type.
+  email: { type: String, pattern: Email }, // you can pass Email function as pattern.
+  ip_address: { type: IPAddress, trim: true }, // you can pass it as a type.
 });
 ```
 
