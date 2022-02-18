@@ -81,9 +81,9 @@ const { valid, errors, value } = nameSchema.validate({ }).
 
 ### `pattern: Function(input) : Boolean`
 
-Pattern accept `Function` and the `arg1` is input with specific value you set in schema and return Boolean type `true` or `false`.
+Pattern accept `Function` and the `arg1` is an input and it must return Boolean type, if the value match the pattern you set return `true` otherwise `false`.
 :::info
-You can use volder supported types in pattern config if type = `String`
+You can use [**volder supported types**](/docs/api/volder-types) in pattern config if type = `String`
 
 ````js
 import { Volder, Email } from 'volder';
@@ -105,7 +105,7 @@ peoples.valid(['messy', 'ronaldo', 'david']); // ->  false
 
 ### `transform: Function(input) : undefined`
 
-`transform` config accpet `Function`, `arg1` is input with specific value you set in schema. it will return void.
+`transform` config accpet `Function`, `arg1` is an input, it's transform the value after complete the validation.
 
 ```js
 const name = singleVolder({ type: String, transform: (input) => "MR." + input });
